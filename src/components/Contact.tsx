@@ -75,28 +75,28 @@ const Contact: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="space-y-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="space-y-8 mb-12">
               <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
-                <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Contact Information</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {contactInfo.map((info, index) => (
                     <div
                       key={index}
-                      className="flex items-start gap-4 p-4 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300"
+                      className="flex flex-col items-center gap-3 p-6 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300"
                     >
                       <div className="p-3 bg-[#FBC437] rounded-lg text-white">{info.icon}</div>
-                      <div>
+                      <div className="text-center">
                         <h4 className="font-semibold text-gray-800 mb-1">{info.title}</h4>
                         {info.link ? (
                           <a
                             href={info.link}
-                            className="text-gray-600 hover:text-[#FBC437] transition-colors duration-300"
+                            className="text-gray-600 hover:text-[#FBC437] transition-colors duration-300 text-sm"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <p className="text-gray-600">{info.value}</p>
+                          <p className="text-gray-600 text-sm">{info.value}</p>
                         )}
                       </div>
                     </div>
@@ -105,8 +105,8 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">Connect With Me</h3>
-                <div className="flex gap-4">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Connect With Me</h3>
+                <div className="flex gap-4 justify-center">
                   <a
                     href="https://linkedin.com/in/sahoosarmistha"
                     target="_blank"
@@ -126,50 +126,52 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-[#FBC437] to-[#FBC437]/80 rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Let's Work Together!</h3>
-                <p className="leading-relaxed">
+              <div className="bg-gradient-to-br from-[#FBC437] to-[#FBC437]/80 rounded-2xl p-8 text-white max-w-3xl mx-auto">
+                <h3 className="text-2xl font-bold mb-4 text-center">Let's Work Together!</h3>
+                <p className="leading-relaxed text-center">
                   I'm actively seeking opportunities as an Associate Software Engineer. If you have an exciting project
                   or opportunity, I'd love to hear from you!
                 </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#FBC437] focus:outline-none transition-colors duration-300"
-                    required
-                  />
+            <div className="bg-white rounded-2xl shadow-xl p-6 max-w-2xl mx-auto">
+              <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Send a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-gray-700 font-medium mb-1 text-sm">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 rounded-lg border-2 border-gray-200 focus:border-[#FBC437] focus:outline-none transition-colors duration-300 text-sm"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-gray-700 font-medium mb-1 text-sm">
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 rounded-lg border-2 border-gray-200 focus:border-[#FBC437] focus:outline-none transition-colors duration-300 text-sm"
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                    Your Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#FBC437] focus:outline-none transition-colors duration-300"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+                  <label htmlFor="subject" className="block text-gray-700 font-medium mb-1 text-sm">
                     Subject
                   </label>
                   <input
@@ -178,13 +180,13 @@ const Contact: React.FC = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#FBC437] focus:outline-none transition-colors duration-300"
+                    className="w-full px-3 py-2 rounded-lg border-2 border-gray-200 focus:border-[#FBC437] focus:outline-none transition-colors duration-300 text-sm"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                  <label htmlFor="message" className="block text-gray-700 font-medium mb-1 text-sm">
                     Message
                   </label>
                   <textarea
@@ -192,17 +194,17 @@ const Contact: React.FC = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#FBC437] focus:outline-none transition-colors duration-300 resize-none"
+                    rows={4}
+                    className="w-full px-3 py-2 rounded-lg border-2 border-gray-200 focus:border-[#FBC437] focus:outline-none transition-colors duration-300 resize-none text-sm"
                     required
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-4 bg-[#FBC437] text-white font-semibold rounded-lg hover:bg-[#FBC437]/90 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                  className="w-full px-6 py-3 bg-[#FBC437] text-white font-semibold rounded-lg hover:bg-[#FBC437]/90 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                 >
-                  <Send size={20} />
+                  <Send size={18} />
                   Send Message
                 </button>
               </form>
