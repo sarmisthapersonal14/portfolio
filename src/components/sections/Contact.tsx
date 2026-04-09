@@ -38,7 +38,7 @@ export default function Contact() {
                 <a
                   href="mailto:sarmistha.persona14@gmail.com"
                   className="text-2xl font-bold tracking-tight hover:underline focus:outline-none focus:ring-2 focus:ring-neon-pink/40 rounded"
-                  aria-label="Email address sarmistha.persona14@gmail.com"
+                  aria-label="Email address sarmistha.personal14@gmail.com"
                 >
                   sarmistha.persona14@gmail.com
                 </a>
