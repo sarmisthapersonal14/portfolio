@@ -27,7 +27,7 @@ export default function Contact() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
             <div className="flex flex-col items-center gap-4 group">
               <a
-                href="mailto:sarmistha.persona14@gmail.com"
+                href="mailto:sarmistha.personal14@gmail.com"
                 aria-label="Send email to Sarmistha"
                 className="w-20 h-20 rounded-full glass flex items-center justify-center group-hover:border-neon-pink/50 transition-all duration-500 group-hover:scale-110 focus:outline-none focus:ring-2 focus:ring-neon-pink/40 rounded"
               >
@@ -36,11 +36,11 @@ export default function Contact() {
               <div className="text-center">
                 <p className="text-xs font-mono text-white/40 uppercase tracking-[0.3em] mb-2">Mail</p>
                 <a
-                  href="mailto:sarmistha.persona14@gmail.com"
+                  href="mailto:sarmistha.personal14@gmail.com"
                   className="text-2xl font-bold tracking-tight hover:underline focus:outline-none focus:ring-2 focus:ring-neon-pink/40 rounded"
                   aria-label="Email address sarmistha.personal14@gmail.com"
                 >
-                  sarmistha.persona14@gmail.com
+                  sarmistha.personal14@gmail.com
                 </a>
               </div>
             </div>
